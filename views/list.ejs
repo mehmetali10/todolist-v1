@@ -7,11 +7,19 @@
     <title>To Do</title>
 </head>
 <body>
-    <% if(kindOfDay == "Saturday" || kindOfDay == "Sunday") { %>
-    <h1 style="color: red;">Today is <%= kindOfDay %> </h1>
-    <%} else{%>
-    <h1 style="color: blue;">Today is <%= kindOfDay %> </h1>
-    <% } %>
-    <%# comment tag %>
+    <h1 style="color: cornflowerblue;">Today is <%= kindOfDay %> </h1>
+    <ul>
+        <% for(var i =0; i<collection.length; i++){ %>
+            <li><%= collection[i] %></li>
+        <% } %>
+    </ul>
+    <form method="post" action="/">
+        <input type="text" name="td" placeholder="type todo">
+        <button type="submit">Create</button>
+    </form>
+
+       
+   
+
 </body>
 </html>
